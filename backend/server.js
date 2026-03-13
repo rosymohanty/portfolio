@@ -11,7 +11,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes
+// Root Route (for Render check)
+app.get("/", (req, res) => {
+  res.send("Portfolio Backend API is running 🚀");
+});
+
+// API Routes
 app.use("/api", contactRoutes);
 
 // MongoDB Connection
