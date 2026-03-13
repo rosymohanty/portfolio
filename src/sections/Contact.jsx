@@ -48,7 +48,10 @@ export const Contact = () => {
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
     try {
-      await axios.post("http://localhost:4000/api/contact", formData);
+      await axios.post(
+  "https://portfolio-64oj.onrender.com/api/contact",
+  formData
+);
 
       setSubmitStatus({
         type: "success",
